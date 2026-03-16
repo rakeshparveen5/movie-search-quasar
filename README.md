@@ -55,6 +55,10 @@ A sample Movie Search application built using **Vue 3**, **Quasar Framework**, a
 
 ---
 
+## Android Apk
+
+---
+
 ## Project Structure
 
 ```
@@ -128,7 +132,7 @@ src/api/movieService.ts
 Replace the key with your own:
 
 ```
-const API_KEY = "YOUR_OMDB_API_KEY";
+const API_KEY_OM_DB = "YOUR_OMDB_API_KEY";
 ```
 
 You can obtain a free key from:
