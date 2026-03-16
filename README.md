@@ -57,6 +57,8 @@ A sample Movie Search application built using **Vue 3**, **Quasar Framework**, a
 
 ## Android Apk
 
+[Download the latest APK](https://drive.google.com/file/d/10sYf2eWmBPGUQC8jHtHKvXkjMcuWq_Ju/view?usp=sharing)
+
 ---
 
 ## Project Structure
