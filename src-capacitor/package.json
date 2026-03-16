@@ -1,0 +1,13 @@
+{
+  "name": "movie-search-quasar",
+  "version": "0.0.1",
+  "description": "A Quasar project using vue 3 that fetches movie details from OMDb api and other movie details",
+  "author": "rakeshparveen5 <rakesh.parveen5@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.6.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}
