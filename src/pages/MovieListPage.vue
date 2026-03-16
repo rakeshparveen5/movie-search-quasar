@@ -10,7 +10,7 @@
       <div class="row q-col-gutter-md q-mt-lg">
         <div
           v-show="!loading"
-          class="col-12 col-sm-6 col-md-3"
+          class="col-6 col-sm-4 col-md-3 col-lg-3"
           v-for="movie in movies"
           :key="movie.imdbID"
         >
