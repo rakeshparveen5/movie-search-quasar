@@ -1,5 +1,5 @@
 <template>
-  <q-card style="min-width: 500px">
+  <q-card style="min-width: 700px">
     <q-card-section class="row items-center">
       <div class="text-h6">
         {{ movie?.Title }}
@@ -14,7 +14,11 @@
 
     <q-card-section class="row q-col-gutter-md">
       <div class="col-4">
-        <q-img :src="movie?.Poster" />
+        <q-img
+          :src="
+            movie?.Poster && movie.Poster !== 'N/A' ? movie.Poster : '/images/movie-placeholder.png'
+          "
+        />
       </div>
 
       <div class="col-8">
