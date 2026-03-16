@@ -1,5 +1,5 @@
 <template>
-  <q-card style="min-width: 700px">
+  <q-card class="movie-detail-card">
     <q-card-section class="row items-center">
       <div class="text-h6">
         {{ movie?.Title }}
@@ -55,3 +55,10 @@ onMounted(async () => {
   movie.value = await getMovieDetails(id);
 });
 </script>
+
+<style scoped>
+.movie-detail-card {
+  max-width: 600px;
+  width: 100%;
+}
+</style>
