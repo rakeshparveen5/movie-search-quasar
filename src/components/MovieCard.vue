@@ -1,6 +1,9 @@
 <template>
   <q-card class="movie-card" @click="goToDetail">
-    <q-img :src="movie.Poster" />
+    <q-img
+      :src="movie.Poster && movie.Poster !== 'N/A' ? movie.Poster : '/images/movie-placeholder.png'"
+      fit="cover"
+    />
 
     <q-card-section>
       <div class="text-subtitle1">
@@ -33,6 +36,9 @@ const goToDetail = async () => {
 .movie-card {
   cursor: pointer;
   transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie-card:hover {
