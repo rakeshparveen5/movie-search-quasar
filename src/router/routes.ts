@@ -4,7 +4,20 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/MovieListPage.vue') }],
+    children: [
+      { path: '', redirect: 'movie-list' },
+      {
+        path: 'movie-list',
+        component: () => import('pages/MovieListPage.vue'),
+        children: [
+          {
+            path: 'movie/:id',
+            name: 'movie-detail',
+            component: () => import('src/dialog/MovieDetailDialog.vue'),
+          },
+        ],
+      },
+    ],
   },
 
   // Always leave this as last one,

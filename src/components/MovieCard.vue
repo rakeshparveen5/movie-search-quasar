@@ -16,13 +16,16 @@
 
 <script setup lang="ts">
 import type { Movie } from '../types/movie';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const props = defineProps<{
   movie: Movie;
 }>();
 
-const goToDetail = () => {
-  console.log('Go to detail page for movie:', props.movie);
+const goToDetail = async () => {
+  await router.push({ name: 'movie-detail', params: { id: props.movie.imdbID } });
 };
 </script>
 

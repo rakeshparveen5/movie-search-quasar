@@ -14,6 +14,12 @@
         <MovieCard :movie="movie" />
       </div>
     </div>
+
+    <router-view v-slot="{ Component }">
+      <q-dialog :model-value="Boolean(route.params.id)" @hide="closeDialog">
+        <component :is="Component" />
+      </q-dialog>
+    </router-view>
   </q-page>
 </template>
 
@@ -22,6 +28,14 @@ import { ref, onMounted } from 'vue';
 import MovieCard from '../components/MovieCard.vue';
 import { searchMovies } from '../api/movieService';
 import type { Movie } from '../types/movie';
+import { useRoute, useRouter } from 'vue-router';
+
+const route = useRoute();
+const router = useRouter();
+
+const closeDialog = async () => {
+  await router.push('/movie-list');
+};
 
 const search = ref<string>('');
 const movies = ref<Movie[]>([]);
