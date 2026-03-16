@@ -12,7 +12,10 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Search Movies </q-item-label>
+        <q-item-label header><b>Search Movies</b></q-item-label>
+
+        <drawer-item title="Movie List" icon="movie" @click="$router.push('/movie-list')" />
+        <drawer-item title="About" icon="info" @click="$router.push('/about')" />
       </q-list>
     </q-drawer>
 
@@ -23,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+import DrawerItem from 'src/components/DrawerItem.vue';
 import { ref } from 'vue';
 
 const leftDrawerOpen = ref(false);
